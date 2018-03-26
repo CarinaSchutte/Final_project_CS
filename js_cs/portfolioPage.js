@@ -5,6 +5,44 @@
     console.log(currentPage)
   
     // TODO: load portfolio tab
+
+    const baseURL = "https://api.github.com"
+    
+fetch(`${baseURL}/users/carinaschutte`)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result.email)
+        infoGitHub = {
+          result.email
+          result.public_repos
+          result.
+        }
+      
+
+
+        
+
+
+
+
+
+
+
+      })
+      const allInfo = result
+
+    fetch(`${baseURL}/users/carinaschutte/repos`)
+      .then(response => response.json())
+      .then(result => { 
+        const bla = []
+        for(i = 0; i < result.length; i++) {
+
+        }
+        // todo: add repos to site
+      })
+
+// append child enzo
+
   
     // EVENT LISTENERS
     const tabSwitchAnimationDuration = 750
