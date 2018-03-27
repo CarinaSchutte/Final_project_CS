@@ -1,45 +1,128 @@
 (function() {
-    // TODO: load CV tab
+  const baseURL = "https://api.github.com"
+  // console.log(baseURL);
 
-    const currentPage = "cv" 
-    console.log(currentPage)
-  
-    // TODO: load portfolio tab
-
-    const baseURL = "https://api.github.com"
-    
-fetch(`${baseURL}/users/carinaschutte`)
+    return fetch(`${baseURL}/users/carinaschutte`)
       .then(response => response.json())
       .then(result => {
-        console.log(result.email)
-        infoGitHub = {
-          result.email
-          result.public_repos
-          result.
-        }
-      
+        const firstInfoGit = result;
+        // console.log(firstInfoGit);
+      })
+})();
 
+(function() {
+  const baseURL = "https://api.github.com"
+  // console.log(baseURL);
+      return fetch(`${baseURL}/users/carinaschutte/repos`)
+      .then(response => response.json())
+      .then(result => {
+        const allRepos = result;
+
+        const createDiv = document.createElement("div");
+        
+        for (let repo of allRepos) {
+          repoParagraph = document.createElement ("p")
+          repoParagraph.innerText = repo.name
+          createDiv.appendChild(repoParagraph)
+        }
+        for (let repo of allRepos) {
+          repoParagraph = document.createElement ("p")
+          repoParagraph.innerText = repo.description
+          createDiv.appendChild(repoParagraph)
+        }
+        for (let repo of allRepos) {
+          repoParagraph = document.createElement ("p")
+          repoParagraph.innerText = repo.language
+          createDiv.appendChild(repoParagraph)
+        }
+
+        function showRepo (repo) {
+          innerInfo = []
+          innerInfo.push(repo.name);
+          innerInfo.push(repo.description);
+          innerInfo.push(repo.language);
+
+          
+          return innerInfo
+          // do stuff with repo
+        }
+
+        // <h3><p class="nameRepo">naam repo</p></h3>
+        //                       <p class="description">naam omschrijving</p>
+        //                       <p class="language">naam taal</p>
+        
+        // alle array uit 1 array halen
+        // per array 3 waardes meegeven
+        // 
+
+      
 
         
 
+        const portfolios = document.getElementById("creativeDiv")
 
+        // const createDiv = document.createElement("div");
+        // console.log(createDiv)
+    
+        // const createText = document.createTextNode(allRepos);
+        // console.log(createText)
 
+        // createDiv.appendChild(createText);
+        document.body.appendChild(createDiv);
+        
+        // console.log(createDiv)
+        
+        
+       
 
-
-
-
+        
       })
-      const allInfo = result
 
-    fetch(`${baseURL}/users/carinaschutte/repos`)
-      .then(response => response.json())
-      .then(result => { 
+    
+    
+        
+        {
+        tweedeIets.name
+        tweedeIets.description
+        tweedeIets.language
+
         const bla = []
         for(i = 0; i < result.length; i++) {
 
         }
         // todo: add repos to site
-      })
+      }
+    
+
+  // const iets = (`${baseURL}/users/carinaschutte`)
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       document.write(iets.public_repos)
+  //     })
+
+
+  //     console.log("hoi")
+
+  //     // TODO: load CV tab
+  //     const currentPage = "cv" 
+  //     console.log(currentPage)
+  //     // TODO: load portfolio tab
+
+
+  //   const tweedeIets = (`${baseURL}/users/carinaschutte/repos`)
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       tweedeIets.name
+  //       tweedeIets.description
+  //       tweedeIets.language
+
+  //       const bla = []
+  //       for(i = 0; i < result.length; i++) {
+
+  //       }
+  //       // todo: add repos to site
+  //     })
+
 
 // append child enzo
 
@@ -95,5 +178,4 @@ fetch(`${baseURL}/users/carinaschutte`)
         }
       })
     }
-  })()
-  
+  })();

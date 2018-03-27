@@ -81,7 +81,7 @@ h2 {
 
 body {
     background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2015/06/FaunascapesB2Rabbit__880.jpg");
-    background-repeat: repeat;
+    background-repeat: repeat repeat-Y;
     background-position: left;
     background-attachment: fixed;
     background-size: contain;
@@ -112,3 +112,11 @@ div.cv {
 
 }
 
+/* Portfolio body*/
+.githubrepository {
+    border-color: blue;
+    border-width: 0.2 rem;
+    border-style: solid;
+    padding: 1rem;
+    border-width: 50%;
+}
