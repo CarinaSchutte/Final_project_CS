@@ -1,5 +1,5 @@
 (function() {
-  const baseURL = "https://api.github.com"
+  const baseURL = "https://api.github.com";
   // console.log(baseURL);
 
     return fetch(`${baseURL}/users/carinaschutte`)
@@ -7,125 +7,35 @@
       .then(result => {
         const firstInfoGit = result;
         // console.log(firstInfoGit);
-      })
+      });
 })();
 
 (function() {
-  const baseURL = "https://api.github.com"
+  const baseURL = "https://api.github.com";
   // console.log(baseURL);
       return fetch(`${baseURL}/users/carinaschutte/repos`)
-      .then(response => response.json())
-      .then(result => {
-        const allRepos = result;
-
-        const createDiv = document.createElement("div");
-        
-        for (let repo of allRepos) {
-          repoParagraph = document.createElement ("p")
-          repoParagraph.innerText = repo.name
-          createDiv.appendChild(repoParagraph)
-        }
-        for (let repo of allRepos) {
-          repoParagraph = document.createElement ("p")
-          repoParagraph.innerText = repo.description
-          createDiv.appendChild(repoParagraph)
-        }
-        for (let repo of allRepos) {
-          repoParagraph = document.createElement ("p")
-          repoParagraph.innerText = repo.language
-          createDiv.appendChild(repoParagraph)
-        }
-
-        function showRepo (repo) {
-          innerInfo = []
-          innerInfo.push(repo.name);
-          innerInfo.push(repo.description);
-          innerInfo.push(repo.language);
-
-          
-          return innerInfo
-          // do stuff with repo
-        }
-
-        // <h3><p class="nameRepo">naam repo</p></h3>
-        //                       <p class="description">naam omschrijving</p>
-        //                       <p class="language">naam taal</p>
-        
-        // alle array uit 1 array halen
-        // per array 3 waardes meegeven
-        // 
-
-      
-
-        
-
-        const portfolios = document.getElementById("creativeDiv")
-
-        // const createDiv = document.createElement("div");
-        // console.log(createDiv)
-    
-        // const createText = document.createTextNode(allRepos);
-        // console.log(createText)
-
-        // createDiv.appendChild(createText);
-        document.body.appendChild(createDiv);
-        
-        // console.log(createDiv)
-        
-        
-       
-
-        
-      })
-
-    
-    
-        
-        {
-        tweedeIets.name
-        tweedeIets.description
-        tweedeIets.language
-
-        const bla = []
-        for(i = 0; i < result.length; i++) {
-
-        }
-        // todo: add repos to site
-      }
-    
-
-  // const iets = (`${baseURL}/users/carinaschutte`)
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       document.write(iets.public_repos)
-  //     })
+        .then(response => response.json())
+        .then(repositories => {
+          // haal overkoepelend div element met id "repositories" op
+          const repositoriesDiv = document.getElementById("repositories")
 
 
-  //     console.log("hoi")
+          // voor elke repo in de repositories array`
+          for(let repo of repositories){
 
-  //     // TODO: load CV tab
-  //     const currentPage = "cv" 
-  //     console.log(currentPage)
-  //     // TODO: load portfolio tab
+            const repoElement = embrace.DOMify(`
+              <div class="githubrepository">
+                <div id="nameRepo"><a href="${repo.svn_url}" target ="_blank"><h3>${repo.name}</a></h3></div>
+                <div id="description"><p>${repo.description}</p></div>
+                <div id="language"><p>${repo.language}</p></div>
+              </div>
+            `)
 
-
-  //   const tweedeIets = (`${baseURL}/users/carinaschutte/repos`)
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       tweedeIets.name
-  //       tweedeIets.description
-  //       tweedeIets.language
-
-  //       const bla = []
-  //       for(i = 0; i < result.length; i++) {
-
-  //       }
-  //       // todo: add repos to site
-  //     })
-
-
-// append child enzo
-
+            //     voeg het aangemaakte element toe aan de div met id "repositories"
+            
+            repositoriesDiv.appendChild(repoElement);
+          }
+        })
   
     // EVENT LISTENERS
     const tabSwitchAnimationDuration = 750
@@ -179,3 +89,10 @@
       })
     }
   })();
+
+  // function borderYesNo(repo){
+  //   if(repo.index("repo.name", "repo.description", "repo.language") >= 0){ 
+  //     return true
+  //   }
+  //   return false
+  // }
