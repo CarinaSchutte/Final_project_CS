@@ -1,0 +1,191 @@
+html {
+    overflow-y: scroll;
+}
+
+/* header part */
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Annie Use Your Telescope', cursive;
+    padding-top: 1rem;
+}
+
+header {
+    background-color: #c0ffee;
+    border-style: inset;
+    border-color: #c9f1fd;
+    border-width: 0.5rem;
+    clear: left;
+}
+
+.container-small {
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+img {
+    height: auto;
+    width: 8rem;
+    padding: 2rem;
+    float: left;
+}
+
+
+/* beautiful colors: 
+color rabbit: rgb(248, 231, 215);
+lookalike color rabbit: rgb(253, 238, 224);
+*/
+
+/*body part*/
+
+h2 {
+    font-family: 'Annie Use Your Telescope', cursive;
+    text-align: left;
+    color: dimgray;
+    clear: both;
+}
+
+body {
+    background-image: url("https://static.boredpanda.com/blog/wp-content/uploads/2015/06/FaunascapesB2Rabbit__880.jpg");
+    background-repeat: repeat;
+    background-position: left;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100%;
+}
+
+.ulList {
+    list-style-image: url("/img_cs/bunnyiconmini.png");
+}
+/* navbar*/
+
+div.navbar {
+    margin: none;
+    padding: none;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    font-family: 'Annie Use Your Telescope', bold;
+    font-size: 2.5rem;
+}
+
+.navbarListItems {
+    float: left;
+    list-style-type: none;
+}
+
+.navbarListItems a {
+    display: block;
+    color: dimgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbarListItems a:hover {
+    background-color: white;
+}
+
+.active {
+    background-color: rgb(248, 231, 215);
+}
+
+/* CV body columns*/
+
+div.columns {
+    border: grey;
+    border-style: dashed;
+    border-bottom: none;
+    border-top: none;
+    border-width: 0.2rem;
+    clear: both;
+}
+
+div.cv {
+    padding: 1rem;
+    background-color: rgba(145, 228, 245, .5);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem grey;
+}
+
+.educatie {
+    column-count: 2;
+    column-width: 40px;
+    column-gap: 2rem;
+}
+
+
+/* Container skill bars */
+.container {
+    width: 100%;
+    background-color: #ddd;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem grey;
+    margin-bottom: 1rem;
+}
+
+.skills {
+    text-align: right;
+    padding-right: 1.5rem;
+    line-height: 3rem;
+    color: black;
+}
+
+.html {
+    width: 90%; 
+    background-color: #ffb3ba;
+}
+
+.css {width: 80%; 
+    background-color: #ffffba;
+}
+
+.js {width: 65%; 
+    background-color:#baffc9;
+} 
+
+.button {
+    background-color:rgb(248, 231, 215);
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem grey;
+}
+
+/* Portfolio body*/
+.githubrepository {
+    padding: 1rem;
+    border-width: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.oneDiv {
+    float: left;
+}
+
+/* About me*/
+
+.imgCarina {
+    float: right;
+    width: auto;
+    height: 18rem;
+    border-radius: 30%;
+    clear: both;
+}
+
+@media only screen and (max-width: 320px) {
+    .ulList{
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .ulList{
+        width: 100px;
+    }
+}
+
