@@ -1,28 +1,28 @@
+/* all info of github*/
 (function() {
   const baseURL = "https://api.github.com";
-  // console.log(baseURL);
 
     return fetch(`${baseURL}/users/carinaschutte`)
       .then(response => response.json())
       .then(result => {
         const firstInfoGit = result;
-        // console.log(firstInfoGit);
       });
 })();
 
+/* all info of repositories */
 (function() {
   const baseURL = "https://api.github.com";
-  // console.log(baseURL);
+
       return fetch(`${baseURL}/users/carinaschutte/repos`)
         .then(response => response.json())
         .then(repositories => {
-          // haal overkoepelend div element met id "repositories" op
+          // haalt div element met de verschillende "repositories" op
           const repositoriesDiv = document.getElementById("repositories")
 
-
-          // voor elke repo in de repositories array`
+          // Ga elke repositorie langs in de array met repositories
           for(let repo of repositories){
 
+            // maakt voor elke repositorie html element aan met onderstaande items
             const repoElement = embrace.DOMify(`
               <div class="githubrepository">
                 <div id="nameRepo"><a href="${repo.svn_url}" target ="_blank"><h3>${repo.name}</a></h3></div>
@@ -31,12 +31,12 @@
               </div>
             `)
 
-            //     voeg het aangemaakte element toe aan de div met id "repositories"
-            
+            // voeg het html element toe aan de div met id "repositories"
             repositoriesDiv.appendChild(repoElement);
           }
         })
   
+        
     // EVENT LISTENERS
     const tabSwitchAnimationDuration = 750
     document.addEventListener("DOMContentLoaded", function() {
@@ -89,10 +89,3 @@
       })
     }
   })();
-
-  // function borderYesNo(repo){
-  //   if(repo.index("repo.name", "repo.description", "repo.language") >= 0){ 
-  //     return true
-  //   }
-  //   return false
-  // }
