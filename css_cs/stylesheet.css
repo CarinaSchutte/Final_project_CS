@@ -181,6 +181,9 @@ div.cv {
     .ulList{
         max-width: 80px;
     }
+    .oneDiv{
+        max-width: 80px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
