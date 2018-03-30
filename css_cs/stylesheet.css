@@ -179,7 +179,7 @@ div.cv {
 
 @media only screen and (max-width: 320px) {
     .ulList{
-        max-width: 150px;
+        max-width: 100px;
     }
 }
 
